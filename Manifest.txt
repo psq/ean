@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/ean
+lib/ean.rb
+test/test_ean.rb
