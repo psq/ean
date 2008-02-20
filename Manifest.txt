@@ -1,7 +1,14 @@
 History.txt
+Licence.txt
 Manifest.txt
 README.txt
 Rakefile
+TODO
 bin/ean
 lib/ean.rb
-test/test_ean.rb
+lib/ean/ean.rb
+lib/ean/tasks.rb
+lib/ean/upc.rb
+lib/ean/version.rb
+spec/spec_helper.rb
+tasks/rspec.rake
