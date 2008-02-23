@@ -34,7 +34,7 @@ module EAN
     return ((10 - checksum % 10)%10).to_s
   end
 
-  def upc?
+  def ean?
     numbers = self.to_s.gsub(/[\D]+/, "").split(//)
 
     checksum = 0

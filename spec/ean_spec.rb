@@ -46,7 +46,7 @@ describe "EAN::Ean" do
   end
 
   it "should ignore non numbers" do
-    "7sdasdasda8sdsa47asdsa9asda4as0adsa0asda1adsa60asdasdas!${%^&*}2".upc?.should == true
+    "7sdasdasda8sdsa47asdsa9asda4as0adsa0asda1adsa60asdasdas!${%^&*}2".ean?.should == true
   end
 
   it "should validate for all zeros" do
@@ -54,35 +54,35 @@ describe "EAN::Ean" do
   end
 
   it "should validate for single 1s" do
-    '1-00000-00000-7'.upc?.should == true
-    '0-10000-00000-9'.upc?.should == true
-    '0-01000-00000-7'.upc?.should == true
-    '0-00100-00000-9'.upc?.should == true
-    '0-00010-00000-7'.upc?.should == true
-    '0-00001-00000-9'.upc?.should == true
-    '0-00000-10000-7'.upc?.should == true
-    '0-00000-01000-9'.upc?.should == true
-    '0-00000-00100-7'.upc?.should == true
-    '0-00000-00010-9'.upc?.should == true
-    '0-00000-00001-7'.upc?.should == true
+    '1-00000-00000-7'.ean?.should == true
+    '0-10000-00000-9'.ean?.should == true
+    '0-01000-00000-7'.ean?.should == true
+    '0-00100-00000-9'.ean?.should == true
+    '0-00010-00000-7'.ean?.should == true
+    '0-00001-00000-9'.ean?.should == true
+    '0-00000-10000-7'.ean?.should == true
+    '0-00000-01000-9'.ean?.should == true
+    '0-00000-00100-7'.ean?.should == true
+    '0-00000-00010-9'.ean?.should == true
+    '0-00000-00001-7'.ean?.should == true
   end
 
   it "should validate for real numbers" do
     samples_values.each do |value|
-      value.upc?.should == true
+      value.ean?.should == true
     end
   end
   
   it "should validate for GTIN-8" do
-    "12345557".upc?.should == true
+    "12345557".ean?.should == true
   end
 
   it "should validate for GTIN-13" do
-    "1234567890128".upc?.should == true
+    "1234567890128".ean?.should == true
   end
 
   it "should validate for GTIN-14" do
-    "12345678901231".upc?.should == true
+    "12345678901231".ean?.should == true
   end
 
   it "should convert all 4 cases to gtin" do
@@ -93,9 +93,9 @@ describe "EAN::Ean" do
   end
 
   it "should validate converted gtin-14" do
-    "12345557".to_gtin.upc?.should == true
-    "784794001602".to_gtin.upc?.should == true
-    "1234567890128".to_gtin.upc?.should == true
-    "12345678901231".to_gtin.upc?.should == true
+    "12345557".to_gtin.ean?.should == true
+    "784794001602".to_gtin.ean?.should == true
+    "1234567890128".to_gtin.ean?.should == true
+    "12345678901231".to_gtin.ean?.should == true
   end
 end

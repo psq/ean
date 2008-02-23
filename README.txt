@@ -5,20 +5,31 @@
 
 == DESCRIPTION:
 
-Provide validation for UPC/EAN numbers
+Provide validation/generation for UPC/EAN/GTIN numbers
 
 == FEATURES/PROBLEMS:
 
-* Validate UPC/EAN Numbers
+* Validate UPC/EAN/GTIN identifiers
+
+* Generate check number for UPC/EAN/GTIN identifiers
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require "rubygems"
+  require "ean"
+
+  "1234567890128".to_gtin
+  
+  "1-234567-890128".ean?
+
+  "1234567890128".to_gtin.ean?
+
+  "784794001602".generate_check_digit
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* hoe 1.5 (to rebuild)
 
 == INSTALL:
 
-* sudo gem install ean-upc
+* sudo gem install ean
