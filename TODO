@@ -1,0 +1,3 @@
+* Integration with upcdatabase.com (either via XML-RPC or downloaded filed, need to decide what's needed first)
+
+* Support more formats.  Which one is the real question.  Will take contributions (with specs!)
