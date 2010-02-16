@@ -48,7 +48,7 @@ module EAN
     when 14
       0.upto(numbers.length-2) do |i| checksum += numbers[i].to_i * ((i-1)%2*3 +i%2) end
     else
-      0
+      return false
     end
 
     return numbers[-1].to_i == (10 - checksum % 10)%10
