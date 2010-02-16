@@ -33,3 +33,7 @@ Provide validation/generation for UPC/EAN/GTIN numbers
 == INSTALL:
 
 * sudo gem install ean
+
+== SOURCE CODE
+http://gitorious.org/ean
+http://github.com/psq/ean
